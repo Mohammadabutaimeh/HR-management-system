@@ -11,137 +11,71 @@ let idFunction= function idFunction(min, max) {
     return Math.floor(Math.random() * (max - min) + min); 
 }
 
+let employeesArray=[];
 
-
-let employees =[
- {
-    employeeID :0,
-    employeeFullName : 'Ghazi Samer',
-    employeeDepartment : 'Administration',
-    employeeLevel : 'Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-
-},
-
-{
-    employeeID : 0,
-    employeeFullName : 'Lana Ali',
-    employeeDepartment : 'Finance',
-    employeeLevel : 'Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-},
- {
-    employeeID : 0,
-    employeeFullName : 'Tamara Ayoub',
-    employeeDepartment : 'Marketing',
-    employeeLevel : 'Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-},
- {
-    employeeID : 0,
-    employeeFullName : 'Safi Walid',
-    employeeDepartment : 'Administration',
-    employeeLevel : 'Mid-Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-},
- {
-    employeeID : 0,
-    employeeFullName : 'Omar Zaid',
-    employeeDepartment : 'Development',
-    employeeLevel : 'Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-},
-{
-    employeeID : 0,
-    employeeFullName : 'Rana Saleh',
-    employeeDepartment : 'Development',
-    employeeLevel : 'Junior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0,
-    
-},
-{
-    employeeID : 0,
-    employeeFullName : 'Hadi Ahmad',
-    employeeDepartment : 'Finance',
-    employeeLevel : 'Mid-Senior',
-    employeeImage : 'https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7',
-    employeeSalary :0,
-    employeeSalaryTax:0,
-    employeeNetSalary:0
+function Employee(empName,empDepartment,empLevel,empImage){
+    this.employeeFullName = empName;
+    this.employeeDepartment = empDepartment;
+    this.employeeLevel = empLevel;
+    this.employeeImage = empImage;
+    this.employeeSalary = 
+    employeesArray.push(this);
 }
 
-]
 
-for (let index = 0; index < employees.length; index++) {
-    switch (employees[index].employeeLevel) {
+let ghazi = new Employee("Ghazi Samer","Administration","Senior","https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7")
+let lana = new Employee("Lana Ali","Finance","Senior","https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7")
+let tamara = new Employee("Tamara Ayoub","Marketing","Senior","https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7")
+let safi = new Employee("Safi Walid","Administration","Mid-Senior","https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7")
+let omar = new Employee("Omar Zaid","Development","Senior","https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7")
+let rana = new Employee("Rana Saleh","Development","Junior","https://th.bing.com/th/id/OIP.jlpYd9M0n0-CA_OiVIoTAQHaHa?w=161&h=180&c=7&r=0&o=5&pid=1.7")
+let hadi = new Employee("Hadi Ahmad","Finance","Mid-Senior","https://th.bing.com/th/id/OIP.e1KNYwnuhNwNj7_-98yTRwHaF7?w=261&h=209&c=7&r=0&o=5&pid=1.7")
+
+
+
+let intialemployeeID= idFunction(1000, 1000);
+for (let index = 0; index < employeesArray.length; index++) {
+    employeesArray[index].employeeId=intialemployeeID ;
+    intialemployeeID=employeesArray[index].employeeId+1
+}
+
+for (let index = 0; index < employeesArray.length; index++) {
+    switch (employeesArray[index].employeeLevel) {
         case 'Senior':
-            employees[index].employeeSalary=salaryFunction(1500, 2000);
-            employees[index].employeeSalaryTax=(employees[index].employeeSalary)*.075;
-            employees[index].employeeNetSalary=(employees[index].employeeSalary)-(employees[index].employeeSalaryTax);
+            employeesArray[index].employeeSalary=salaryFunction(1500, 2000);
+            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
+            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
             break;
         case 'Mid-Senior':
-            employees[index].employeeSalary=salaryFunction(1000, 1500);
-            employees[index].employeeSalaryTax=(employees[index].employeeSalary)*.075;
-            employees[index].employeeNetSalary=(employees[index].employeeSalary)-(employees[index].employeeSalaryTax);
+            employeesArray[index].employeeSalary=salaryFunction(1000, 1500);
+            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
+            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
+            break;
+        case 'Junior':
+            employeesArray[index].employeeSalary=salaryFunction(500, 1000);
+            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
+            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
             break;
         default:
-            employees[index].employeeSalary=salaryFunction(500, 1000);
-            employees[index].employeeSalaryTax=(employees[index].employeeSalary)*.075;
-            employees[index].employeeNetSalary=(employees[index].employeeSalary)-(employees[index].employeeSalaryTax);
+           
             break;
     }
   
 }
 
+console.log(employeesArray[5].employeeNetSalary);
 
-let intialemployeeID= idFunction(1000, 1000);
-for (let index = 0; index < employees.length; index++) {
-    employees[index].employeeID=intialemployeeID ;
-    intialemployeeID=employees[index].employeeID+1
 
+Employee.prototype.renderEmployees=function(){
+    document.write(
+        `Employee ID : ${this.employeeId}<br>Employee Name : ${this.employeeFullName}<br>Employee Department : ${this.employeeDepartment}<br>Employee Level : ${this.employeeLevel}<br>Employee Image : <a href="${this.employeeImage}" >${this.employeeImage}</a><br>Employee Net Salary : ${this.employeeNetSalary}<br><br> `
+        )  
 }
 
 
 
-console.log(employees[6].employeeSalary);
-console.log(employees[6].employeeSalaryTax);
-console.log(employees[6].employeeNetSalary);
-
-const infoList = document.getElementById("info")
-
-for (let i = 0; i < employees.length; i++) {
-  
-    infoList.insertAdjacentHTML("beforeend",`
-    <li>Employee ID: ${employees[i].employeeID}</li>
-    <li>Employee Name: ${employees[i].employeeFullName}</li>
-    <li>Employee Department: ${employees[i].employeeDepartment}</li>
-    <li>Employee Level: ${employees[i].employeeLevel}</li>
-    <li> Employee Image: <a href="${employees[i].employeeImage}">${employees[i].employeeImage}</a></li>
-    <li>Employee Salary: ${employees[i].employeeNetSalary}</li>
-    <br>`)
-
-   /*infoList.insertAdjacentHTML("beforeend",`
-    <li>Employee Name: ${employees[i].employeeFullName}</li>
-    <li>Employee Salary: ${employees[i].employeeNetSalary}</li>
-    <br>`)*/
-
+for (let index = 0; index < employeesArray.length; index++) {
+    employeesArray[index].renderEmployees();
+    
 }
 
