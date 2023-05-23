@@ -12,7 +12,7 @@ let idFunction= function idFunction(min, max) {
 }
 
 let employeesArray=[];
-
+let intialemployeeID= idFunction(1000, 1000);
 function Employee(empName,empDepartment,empLevel,empImage){
     this.employeeId=0;
     this.employeeFullName = empName;
@@ -20,6 +20,37 @@ function Employee(empName,empDepartment,empLevel,empImage){
     this.employeeLevel = empLevel;
     this.employeeImage = empImage;
     this.employeeSalary=0;
+   this.generateRandomsalary=function(){
+
+        let employeeRandomSalary;
+        let employeeSalaryTax;
+        switch (this.employeeLevel) {
+            case 'Senior':
+                employeeRandomSalary=salaryFunction(1500, 2000);
+                 employeeSalaryTax =(employeeRandomSalary)*.075;
+                 this.employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
+                break;
+            case 'Mid-Senior':
+                employeeRandomSalary=salaryFunction(1000, 1500);
+            employeeSalaryTax =(employeeRandomSalary)*.075;
+            this.employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
+                break;
+            case 'Junior':
+                employeeRandomSalary=salaryFunction(500, 1000);
+             employeeSalaryTax =(employeeRandomSalary)*.075;
+             this.employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
+                break;
+            default:
+               
+                break;
+        }
+    
+    }
+    this.generatId=function(){
+        
+        this.employeeId=intialemployeeID ;
+        intialemployeeID=this.employeeId+1
+    }
     employeesArray.push(this);
 }
 
@@ -34,50 +65,21 @@ let hadi = new Employee("Hadi Ahmad","Finance","Mid-Senior","https://th.bing.com
 
 
 
-let intialemployeeID= idFunction(1000, 1000);
-for (let index = 0; index < employeesArray.length; index++) {
-    employeesArray[index].employeeId=intialemployeeID ;
-    intialemployeeID=employeesArray[index].employeeId+1
-}
-
-for (let index = 0; index < employeesArray.length; index++) {
-    let employeeRandomSalary;
-    let employeeSalaryTax;
-    switch (employeesArray[index].employeeLevel) {
-        case 'Senior':
-            employeeRandomSalary=salaryFunction(1500, 2000);
-             employeeSalaryTax =(employeeRandomSalary)*.075;
-            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
-            break;
-        case 'Mid-Senior':
-            employeeRandomSalary=salaryFunction(1000, 1500);
-        employeeSalaryTax =(employeeRandomSalary)*.075;
-            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
-            break;
-        case 'Junior':
-            employeeRandomSalary=salaryFunction(500, 1000);
-         employeeSalaryTax =(employeeRandomSalary)*.075;
-            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
-            break;
-        default:
-           
-            break;
-    }
-  
-}
 
 console.log(employeesArray[0]);
 
 
 Employee.prototype.renderEmployees=function(){
     document.write(
-        `Employee ID : ${this.employeeId}<br>Employee Name : ${this.employeeFullName}<br>Employee Department : ${this.employeeDepartment}<br>Employee Level : ${this.employeeLevel}<br>Employee Image : <a href="${this.employeeImage}" >${this.employeeImage}</a><br>Employee Net Salary : ${this.employeeSalary}<br><br> `
+        `<p>Employee ID : ${this.employeeId}<br>Employee Name : ${this.employeeFullName}<br>Employee Department : ${this.employeeDepartment}<br>Employee Level : ${this.employeeLevel}<br>Employee Image : <a href="${this.employeeImage}" >${this.employeeImage}</a><br>Employee Net Salary : ${this.employeeSalary}<br><br> </p>`
         )  
 }
 
 
 
 for (let index = 0; index < employeesArray.length; index++) {
+    employeesArray[index].generatId();
+    employeesArray[index].generateRandomsalary();
     employeesArray[index].renderEmployees();
     
 }
