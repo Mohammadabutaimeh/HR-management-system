@@ -14,11 +14,12 @@ let idFunction= function idFunction(min, max) {
 let employeesArray=[];
 
 function Employee(empName,empDepartment,empLevel,empImage){
+    this.employeeId=0;
     this.employeeFullName = empName;
     this.employeeDepartment = empDepartment;
     this.employeeLevel = empLevel;
     this.employeeImage = empImage;
-    this.employeeSalary = 
+    this.employeeSalary=0;
     employeesArray.push(this);
 }
 
@@ -40,21 +41,23 @@ for (let index = 0; index < employeesArray.length; index++) {
 }
 
 for (let index = 0; index < employeesArray.length; index++) {
+    let employeeRandomSalary;
+    let employeeSalaryTax;
     switch (employeesArray[index].employeeLevel) {
         case 'Senior':
-            employeesArray[index].employeeSalary=salaryFunction(1500, 2000);
-            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
-            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
+            employeeRandomSalary=salaryFunction(1500, 2000);
+             employeeSalaryTax =(employeeRandomSalary)*.075;
+            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
             break;
         case 'Mid-Senior':
-            employeesArray[index].employeeSalary=salaryFunction(1000, 1500);
-            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
-            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
+            employeeRandomSalary=salaryFunction(1000, 1500);
+        employeeSalaryTax =(employeeRandomSalary)*.075;
+            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
             break;
         case 'Junior':
-            employeesArray[index].employeeSalary=salaryFunction(500, 1000);
-            employeesArray[index].employeeSalaryTax=(employeesArray[index].employeeSalary)*.075;
-            employeesArray[index].employeeNetSalary=(employeesArray[index].employeeSalary)-(employeesArray[index].employeeSalaryTax);
+            employeeRandomSalary=salaryFunction(500, 1000);
+         employeeSalaryTax =(employeeRandomSalary)*.075;
+            employeesArray[index].employeeSalary=(employeeRandomSalary)-(employeeSalaryTax);
             break;
         default:
            
@@ -63,12 +66,12 @@ for (let index = 0; index < employeesArray.length; index++) {
   
 }
 
-console.log(employeesArray[5].employeeNetSalary);
+console.log(employeesArray[0]);
 
 
 Employee.prototype.renderEmployees=function(){
     document.write(
-        `Employee ID : ${this.employeeId}<br>Employee Name : ${this.employeeFullName}<br>Employee Department : ${this.employeeDepartment}<br>Employee Level : ${this.employeeLevel}<br>Employee Image : <a href="${this.employeeImage}" >${this.employeeImage}</a><br>Employee Net Salary : ${this.employeeNetSalary}<br><br> `
+        `Employee ID : ${this.employeeId}<br>Employee Name : ${this.employeeFullName}<br>Employee Department : ${this.employeeDepartment}<br>Employee Level : ${this.employeeLevel}<br>Employee Image : <a href="${this.employeeImage}" >${this.employeeImage}</a><br>Employee Net Salary : ${this.employeeSalary}<br><br> `
         )  
 }
 
