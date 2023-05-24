@@ -1,12 +1,13 @@
+
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+
     font-family: 'Chakra Petch', sans-serif;
     
 }
 
-header {
+#header {
     background-color:#355E3B;
     display: flex;
     justify-content: space-around;
@@ -14,38 +15,27 @@ header {
     height: 120px;
 
 }
-.header-p{
+#header-p{
 
     color: #F6FFDe;
     
 
 }
-.hr-header{
+#projectNameAncher{
     text-decoration: none;
     font-size: 19px;
 }
-.topnav{
-    display: flex;
-    gap: 20px;
-    color: #F6FFDe;
-    list-style: none;
-    
-}
-.topnav li a  {
-    color: #F6FFDe;
-    text-decoration: none;
-    font-size: larger;
-
-}
-main{
+#main{
     background-color:#F6FFDE ;
     min-height: calc(100vh - 120px);
-    display:flexbox;
-    margin: 0 auto;
-    padding-top: 30px;
     align-items:center;
+    padding-left: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-weight: bold;
 }
-footer {
+
+#footer {
     height: 40px;
     background-color: #355E3B;
     display: flex;
