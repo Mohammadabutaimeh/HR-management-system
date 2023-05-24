@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +7,7 @@
     
 }
 
-header {
+#header {
     background-color:#355E3B;
     display: flex;
     justify-content: space-around;
@@ -14,73 +15,35 @@ header {
     height: 120px;
 
 }
-.header-p{
+#header-p{
 
     color: #F6FFDe;
     
 
 }
-.hr-header{
+#projectNameAncher{
     text-decoration: none;
     font-size: 19px;
 }
-.topnav{
-    display: flex;
-    gap: 20px;
-    color: #F6FFDe;
-    list-style: none;
-    
-}
-.topnav li a  {
-    color: #F6FFDe;
-    text-decoration: none;
-    font-size: larger;
 
-}
-main{
+#main{
     background-color:#F6FFDE ;
     min-height: calc(100vh - 120px);
-    align-items:center;
-    padding-left: 20px;
     padding-top: 50px;
     padding-bottom: 40px;
     font-weight: bold;
-}
-footer {
-    height: 40px;
-    background-color: #355E3B;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
+}
+
+#footer {
+    height: 40px;
+    background-color: #355E3B;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     color: #F6FFDe;
-
-}
-
-table, th,tr{
-height: 15px;
-  margin-top: 10px;
-  padding-bottom: 50px;
-  margin-left: 20px;
-  font-size: 18px; 
-  
-}
-td{
-   font-weight: bold;
-}
-#info{
-    padding-bottom: 50px;
-    padding-top: 20px;
-    padding-left: 20px;
-    font-weight: bold;
-    color: black;
-    list-style: none;
    
 }
-li a{
-    text-decoration: none;
-    color: #245953;
-}
 
-a {
-    color: #245953;  
-}
