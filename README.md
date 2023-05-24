@@ -14,7 +14,7 @@
 3. I used a document.write() method to render the output of app.js on homepage (index.html).
 4. I changed the postion of <script> over footer tag  becouse the rendered informations was below of footer.
 
-***secound day*** 
+***third day*** 
 
 1. built the whole site using js file using DOM Manipulation.
 2. add an image for every employee.
