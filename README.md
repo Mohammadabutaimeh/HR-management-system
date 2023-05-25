@@ -20,3 +20,7 @@
 2. add an image for every employee.
 3. erease everything inside the html files except the <script>. 
 4. create 4 divs inside the main--every department have div so every employee will be grouped by depratment using for loop to render the objects.
+
+***forth day***
+
+1. changed the background color of the rendered object depending on department.
