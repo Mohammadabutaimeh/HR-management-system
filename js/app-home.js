@@ -190,7 +190,7 @@ footer.appendChild(footerMainPar);
 
 Employee.prototype.renderEmployees=function(){
     let employeeDiv=document.createElement("div");
-   employeeDiv.style.background="#99C68E";
+   employeeDiv.style.background="#7AA874";
    employeeDiv.style.paddingTop="10px";
    employeeDiv.style.paddingLeft="20px";
    employeeDiv.style.paddingBottom="30px";
@@ -209,14 +209,13 @@ Employee.prototype.renderEmployees=function(){
 
     let mainParagraph=document.createElement("p");
     mainParagraph.style.fontSize="15px"
-    mainParagraph.style.textAlign="left"
-    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId} - Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
+    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId}  Department: ${this.employeeDepartment}  Level: ${this.employeeLevel} - Salary: ${this.employeeSalary}  `;
     employeeDiv.appendChild(mainParagraph);
     
 }
 Employee.prototype.renderEmployees1=function(){
     let employeeDiv=document.createElement("div");
-   employeeDiv.style.background="#99C68E";
+   employeeDiv.style.background="#AACB73";
    employeeDiv.style.paddingTop="10px";
    employeeDiv.style.paddingLeft="20px";
    employeeDiv.style.paddingBottom="30px";
@@ -235,15 +234,14 @@ Employee.prototype.renderEmployees1=function(){
 
     let mainParagraph=document.createElement("p");
     mainParagraph.style.fontSize="15px"
-    mainParagraph.style.textAlign="left"
-    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId} - Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
+    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId}  Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
     employeeDiv.appendChild(mainParagraph);
     
 }
 
 Employee.prototype.renderEmployees2=function(){
     let employeeDiv=document.createElement("div");
-   employeeDiv.style.background="#99C68E";
+   employeeDiv.style.background="#C7E9B0";
    employeeDiv.style.paddingTop="10px";
    employeeDiv.style.paddingLeft="20px";
    employeeDiv.style.paddingBottom="30px";
@@ -262,14 +260,13 @@ Employee.prototype.renderEmployees2=function(){
 
     let mainParagraph=document.createElement("p");
     mainParagraph.style.fontSize="15px"
-    mainParagraph.style.textAlign="left"
-    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId} - Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
+    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId}  Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
     employeeDiv.appendChild(mainParagraph);
     
 }
 Employee.prototype.renderEmployees3=function(){
     let employeeDiv=document.createElement("div");
-   employeeDiv.style.background="#99C68E";
+   employeeDiv.style.background="#DDFFBB";
    employeeDiv.style.paddingTop="10px";
    employeeDiv.style.paddingLeft="20px";
    employeeDiv.style.paddingBottom="30px";
@@ -288,8 +285,7 @@ Employee.prototype.renderEmployees3=function(){
 
     let mainParagraph=document.createElement("p");
     mainParagraph.style.fontSize="15px"
-    mainParagraph.style.textAlign="left"
-    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId} - Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
+    mainParagraph.textContent=` Name: ${this.employeeFullName} - ID: ${this.employeeId}  Department: ${this.employeeDepartment} - Level: ${this.employeeLevel} -  Salary: ${this.employeeSalary}  `;
     employeeDiv.appendChild(mainParagraph);
     
 }
@@ -306,12 +302,12 @@ for (let index = 0; index < employeesArray.length; index++) {
     employeesArray[index].generateRandomsalary();
     employeesArray[index].renderEmployees1();
             break;
-            case 'Marketing':
+            case 'Development':
             employeesArray[index].generatId();
     employeesArray[index].generateRandomsalary();
     employeesArray[index].renderEmployees2();
             break;
-            case 'Development':
+            case 'Marketing':
             employeesArray[index].generatId();
     employeesArray[index].generateRandomsalary();
     employeesArray[index].renderEmployees3();
@@ -321,6 +317,6 @@ for (let index = 0; index < employeesArray.length; index++) {
             break;
     }
     
-          
+    
   
 }
